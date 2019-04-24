@@ -1,0 +1,66 @@
+/* pages/me/me.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #ededed;
+}
+/* 用户信息展示注册 */
+.user {
+  display: flex;
+  flex-direction: row;
+  background-color: #09dcc6;
+  width: 100%;
+  height: 200rpx;
+  align-items: center;
+  color: #ffffff;
+}
+.user image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  background-color:#ffffff;
+  margin-left: 40rpx;
+}
+.user text {
+  margin-left: 30rpx;
+}
+/* 个人功能菜单栏 */
+.content {
+  width: 100%;
+  background-color: #ffffff;
+}
+.content view {
+  border-bottom: solid 1px #e1e1e1;
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  color: #646464;
+}
+.content view view text {
+  margin-left: 18rpx;
+}
+.content view text {
+  margin-right: 12rpx;
+}
+.content image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  background-color: #09dcc6;
+  margin-left: 18rpx;
+}
+/* 底部登陆 退出 */
+.userquit {
+  width: 100%;
+  margin-top: 16rpx;
+}
+button {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+}

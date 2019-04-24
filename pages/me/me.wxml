@@ -1,0 +1,59 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <!-- 顶部用户信息展示注册 -->
+  <navigator class='user' url='/pages/login/login'>
+    <image src='/pages/imgs/user.png'></image>
+    <view>
+      <text>请点击登录/注册</text>
+    </view>
+  </navigator>
+  <!-- 个人功能菜单栏 -->
+  <view class='content'>
+    <view>
+      <view>
+        <image src='/pages/imgs/yud.png'></image>
+        <text>堂食预定</text>
+      </view>
+      <text>></text>
+    </view>
+    <view>
+      <view>
+        <image src='/pages/imgs/dingd.png'></image>
+        <text>九成菜订单</text>
+      </view>
+      <text>></text>
+    </view>
+    <view>
+      <view>
+        <image src='/pages/imgs/youh.png'></image>
+        <text>我的优惠券</text>
+      </view>
+      <text>></text>
+    </view>
+    <view>
+      <view>
+        <image src='/pages/imgs/jif.png'></image>
+        <text>我的积分</text>
+      </view>
+      <text>></text>
+    </view>
+    <view>
+      <view>
+        <image src='/pages/imgs/qianb.png'></image>
+        <text>我的钱包</text>
+      </view>
+      <text>></text>
+    </view>
+    <view>
+      <view>
+        <image src='/pages/imgs/yij.png'></image>
+        <text>意见反馈</text>
+      </view>
+      <text>></text>
+    </view>
+  </view>
+  <!-- 登陆 退出 -->
+  <view class='userquit'>
+    <button bindtap='loginuser'>点击登录</button>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/template/template.wxml-->
+<template name="greenstotal">
+  <!-- 食物展示 -->
+  <view class="tmpContainer">
+    <!-- 商品图 -->
+    <view>
+      <image class='photo' src="http://{{imageaddress}}" mode="aspectFill"></image>
+    </view>
+    <!-- 商品描述 -->
+    <view class='content'>
+      <view class='contentop'>
+        <text class='textname'>{{foodname}}</text>
+        <text class='textscore'>{{score}}分</text>
+      </view>
+      <view class='content_text'>
+        <text>咸度{{salty}} 辣度{{hot}}  甜度{{sweet}}</text>
+        <text>标准口味</text>
+      </view>
+    </view>
+    <!-- 右侧添加购物车 -->
+    <view class='content_add' bindtap='addshop'  data-foodid="{{foodId}}">
+      <text>￥{{kitchenPrice}}</text>
+      <image src='/pages/imgs/gwc.png'></image>
+    </view>
+  </view>
+</template>

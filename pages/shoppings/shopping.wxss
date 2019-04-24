@@ -1,0 +1,137 @@
+/* pages/shoppings/shopping.wxss */
+.container{
+  background:#fefefe;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+/* 点餐 编辑 */
+.redact_top {
+  border-top: solid 1rpx #d6d4d4;
+  height: 72rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.redact_top text {
+  padding: 10rpx 40rpx;
+  font-size: 32rpx;
+}
+/* 商品详细操作界面 */
+.item-content{
+  display: flex;
+  width:calc(100% - 1rpx);
+  height:100%;
+  flex-direction: column;
+}
+/* 工作餐容器 */
+.item-content .box{
+  overflow: scroll;
+  border-top: solid 1rpx #e1e1e1;
+  border-bottom: solid 1rpx #e1e1e1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 250rpx;
+}
+.box checkbox {
+  margin-left: 10rpx;
+}
+/* 左侧图片 */
+.item-shop {
+  background-color:#0bdcc7;
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 20rpx;
+}
+/* 中间内容 */
+.item-text {
+  width: 40%;
+  border: solid 1rpx #928988;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10rpx;
+}
+.shopname {
+  font-size: 36rpx;
+}
+.shopfeel text {
+  font-size: 32rpx;
+  color: #909090;
+  margin-right: 12rpx;
+}
+/* 右侧加减数量删除 */
+.item-price {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+ width: 180rpx;
+ height: 100%;
+}
+.item-price text {
+  color: #09dcc6;
+}
+.number {
+  margin: 0 12rpx;
+}
+.item-price .num {
+  border: solid 1rpx #e1e1e1;
+  display: inline-table;
+  width: 48rpx;
+  height: 48rpx;
+  text-align: center;
+  border-radius: 100%;
+  font-weight: bold;
+  color: #09dcc6;
+}
+.price-delect {
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: -100rpx;
+}
+/* 购物车结算提交---底部 */
+.bottom-bar{
+    display:flex;
+    position: fixed;
+    bottom: 0rpx;
+    margin-bottom: 0rpx;
+    width:100%;
+    height:120rpx;
+    box-shadow: 1rpx -2rpx 1rpx #cccccc;
+    font-size: 36rpx;
+}
+.bottom-bar .count{
+    background-color: #434343;
+    height: 120rpx;
+    flex-grow: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.count checkbox {
+  display: flex;
+  position: fixed;
+  left: 10rpx;
+  color: #ffffff;
+  font-size: 30rpx;
+}
+.num1 {
+    font-weight:bold;
+    color:#fefefe;
+}
+.num2 {
+  font-weight: bold;
+  color: #0bdcc7;
+  margin-right: 140rpx;
+}
+.bottom-bar .btn{
+    height:120rpx;
+    color:#fff;
+    font-weight: bold;
+    background: #09dcc6;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

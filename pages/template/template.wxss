@@ -1,0 +1,60 @@
+/* pages/template/template.wxss */
+.tmpContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1rpx solid #e1e1e1;
+  height: 280rpx;
+  font-size: 30rpx;
+}
+/* 商品图 */
+.photo {
+  height: 200rpx;
+  width: 200rpx;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+}
+/* 商品描述 */
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 330rpx;
+}
+.textname {
+  width: 230rpx;
+  display: inline-flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 36rpx;
+  margin-right: 10rpx;
+}
+.textscore {
+  float: right;
+  margin-top: 4rpx;
+}
+.content text {
+  padding: 10rpx 0;
+}
+.contentop {
+  color: #646464;
+}
+.content_text {
+  display: flex;
+  flex-direction: column;
+  color: #909090;
+}
+/* 右侧添加进购物车 */
+.content_add {
+  display: flex;
+  flex-direction: column;
+  margin-right: 36rpx;
+  font-size: 36rpx;
+  color: #09dcc6;
+}
+.content_add image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 36rpx;
+}

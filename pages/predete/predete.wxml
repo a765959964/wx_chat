@@ -1,0 +1,30 @@
+<!--pages/predete/predete.wxml-->
+<view class='contenttotal'>
+  <!-- 预定选择 -->
+  <view>
+    <text>门店名称</text>
+    <picker mode='selector' range='{{shop}}' bindchange='bindshop'>选择门店{{shop[index]}}</picker>
+  </view>
+  <view>
+    <text>用餐时间</text>
+    <picker mode="time" value='{{date}}' bindchange='datechange'>选择时间{{date}}</picker>
+  </view>
+  <view class='classfood'>
+    <text>用餐类型</text>
+    <button size='mini'>工作餐</button>
+    <button size='mini'>点餐</button>
+  </view>
+  <view>
+    <text>用餐人数</text>
+    <picker mode='selector' range='{{people}}'>选择人数</picker>
+  </view>
+  <view>
+    <text>所选桌位</text>
+    <text class='sorttext'>当前大厅还有{{}}5桌可选，包间还有{{}}6桌可选 ></text>
+  </view>
+  <view>
+    <text>备注</text>
+  </view>
+  <!-- 确定跳转 -->
+  <button class='submit_but' form-type='submit' bindtap='bindsub'>确定</button>
+</view>

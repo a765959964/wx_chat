@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<navigator open-type='navigateBack' class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" type='primary'>微信登陆</button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" type='primary' bindtap='goToPhonelog'>手机号登陆/注册</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</navigator>

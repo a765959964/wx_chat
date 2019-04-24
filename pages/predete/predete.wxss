@@ -1,0 +1,42 @@
+/* pages/predete/predete.wxss */
+.contenttotal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #ededed;
+}
+/* 预定选择 */
+.contenttotal view {
+  border-bottom: solid 1rpx #ededed;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+}
+.contenttotal view text {
+  display: flex;
+  margin-left: 50rpx;
+  color: #303030;
+}
+.contenttotal view picker {
+  margin-left: 50rpx;
+  color: #636363;
+}
+.classfood button {
+  color: #ffffff;
+  background-color: #909090;
+}
+.sorttext {
+  font-size: 24rpx;
+}
+/* 确定按钮 */
+.submit_but {
+  width: 100%;
+  margin-top: 40rpx;
+  background-color: #09dcc6;
+  color: #fefefe;
+  font-size: 36rpx;
+}

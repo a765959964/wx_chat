@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<import src='/pages/template/template' />
+<view class='totalcontainer'>
+<!-- 顶部地址栏 -->
+  <view class='current_adress'>
+    <text>三华科技餐厅陇海路伊河路店</text>
+    <image src="/pages/imgs/xia.png"></image>
+  </view>
+  <!-- 搜索菜名或店名 -->
+  <view class="search">
+    <view class="search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input class="" type='text' placeholder="请输入店名称或菜品名称" value="{{searchValue}}"/>
+    </view>
+  </view>
+  <!-- 轮播图组件 -->
+  <swiper indicator-dots="{{swiperList.length>1}}" indicator-color='white' indicator-active-color='#09dcc6' autoplay="{{swiperList.length>1}}" interval='3000' circular>
+    <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+      <navigator url='/pages/phonelog/phonelog'>
+        <image mode="" src='{{item.imgSrc}}'></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- 菜品分类选择 -->
+  <view class='classify'>
+      <picker bindchange="bindPickerChange" value='{{index}}' range='{{array}}'>
+        <text class='classcolor'>菜品分类</text>
+        <image src='/pages/imgs/xiala.png'></image>
+        <text class='classtext'>{{array[index]}}</text>
+      </picker>
+    <!-- <view>
+      <button type='default' class='class_ts'>九成菜</button>
+      <button class='class_grass'>堂食</button>
+    </view> -->
+  </view>
+  <!-- 综合评分销量价格 选择栏 -->
+  <view class="classort {{isfixed ? 'isfixed':''}}">
+    <scroll-view class='scrolltext' scroll-x>
+      <view class="navtext {{currentIndexNav === index? 'active':''}}" data-index="{{index}}" wx:for="{{tabs}}" wx:key='{{index}}' bindtap="tabClick">{{item}}</view>
+    </scroll-view>
+  </view>
+  <!-- 底部商品详情  -->
+  <view class="{{isfixed ? 'temp_shop':''}}" hidden="{{currentIndexNav != 0}}">
+    <block wx:for="{{shops}}" wx:key="{{index}}">
+      <view data-id='{{index}}'>
+        <template is="greenstotal" data="{{...item}}" ></template>
+      </view>
+    </block>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+    <view wx:else class="loadmore">没有更多内容了</view>
+  </view>
+  <view class="{{isfixed ? 'temp_shop':''}}" hidden="{{currentIndexNav != 1}}">
+    <block wx:for="{{shops}}" wx:key="{{index}}">
+      <view data-id='{{index}}'>
+        <template is="greenstotal" data="{{...item}}"></template>
+      </view>
+    </block>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+    <view wx:else class="loadmore">没有更多内容了</view>
+  </view>
+  <view class="{{isfixed ? 'temp_shop':''}}" hidden="{{currentIndexNav != 2}}">
+    <block wx:for="{{shops}}" wx:key="{{index}}">
+      <view data-id='{{index}}'>
+        <template is="greenstotal" data="{{...item}}"></template>
+      </view>
+    </block>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+    <view wx:else class="loadmore">没有更多内容了</view>
+  </view>
+  <view class="{{isfixed ? 'temp_shop':''}}" hidden="{{currentIndexNav != 3}}">
+    <block wx:for="{{shops}}" wx:key="{{index}}">
+      <view data-id='{{index}}'>
+        <template is="greenstotal" data="{{...item}}"></template>
+      </view>
+    </block>
+    <view wx:if="{{hasMore}}" class="loadmore loading">正在加载...</view>
+    <view wx:else class="loadmore">没有更多内容了</view>
+  </view>
+</view>

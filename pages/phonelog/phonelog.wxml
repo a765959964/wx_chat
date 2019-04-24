@@ -1,0 +1,4 @@
+<!--pages/phonelog/phonelog.wxml-->
+<view>
+  <button type='primary' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>请输入手机号</button>
+</view>
